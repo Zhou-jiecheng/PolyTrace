@@ -8,32 +8,48 @@ Both of them continuously enhancing for more tasks.
 
 We collect the length from training trajectory for data anonymization.
 
-```json
+```
 {
-    step:
-        [
+    "0":
+        {
             "input":[],
             "output":[],
-        ]
+        },
+    "1":
+        {
+            "input":[],
+            "output":[],
+        }
     ...
 }
 ```
 
 For multi-turn task workloads:
-```json
+
+```
 {
-    step:
-        [
+    "0":[
             {
-                "input":[],
-                "output":[],
+                "input":[...],
+                "output":[...],
             },
             {
-                "input":[],
-                "output":[],
+                "input":[...],
+                "output":[...],
             },
             ...
-        ]
+        ],
+    "1":[
+            {
+                "input":[...],
+                "output":[...],
+            },
+            {
+                "input":[...],
+                "output":[...],
+            },
+            ...
+        ],
 }
 ```
 

@@ -89,17 +89,6 @@ class Generator:
         random.shuffle(result)
         return result
 
-
-    def generate_industrial_workload(self, bsz, type="math"):
-        """
-        generate industrial workload
-        """
-        math_input_dist_param = (np.float64(0.5320355020031421), 48.39466670710811, np.float64(80.14650081294441))
-        math_output_dist_param = (np.float64(2.4379588100102367), np.float64(195.42315070509), np.float64(3847.2423976371874))
-        math_inputlen_list = stats.lognorm.rvs(*math_input_dist_param, size=bsz)
-        math_outputlen_list = stats.gamma.rvs(*math_output_dist_param, size=bsz)
-
-
     def generate(self, bsz=64, step="0"):
         """
         A dummy workload generate example. Generate Cosmos workloads
@@ -304,7 +293,6 @@ class Generator:
             ]
             context = random.choices(vocabulary, k=input_len)
 
-            # 构建包含视频标记的 messages 格式（参考 rl_dataset.py）
             text_content = " ".join(context)
             messages = [
                 {

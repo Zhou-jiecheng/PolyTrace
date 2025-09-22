@@ -8,7 +8,7 @@ Both of them continuously enhancing for more tasks.
 
 We collect the length from training trajectory for data anonymization.
 
-‘’‘json
+```json
 {
     step:
         [
@@ -17,10 +17,10 @@ We collect the length from training trajectory for data anonymization.
         ]
     ...
 }
-’‘’
+```
 
 For multi-turn task workloads:
-‘’‘json
+```json
 {
     step:
         [
@@ -35,7 +35,7 @@ For multi-turn task workloads:
             ...
         ]
 }
-’‘’
+```
 
 ## Use example
 

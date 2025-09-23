@@ -4,6 +4,19 @@ This repository hosts the public releases of PolyTrace in LLM RLVR training. Con
 
 Both of them continuously enhancing for more tasks.
 
+
+| Task                    | Model size | Total Step | Dataset        |
+|-------------------------|------------|------------|----------------|
+| Mathematics             | 32B   | 191        | DAPO     |
+| Programming             | 14B    | 190        | DeepCoder |
+| Searching               | 7B    | 147        | NO hotpotqa |
+| Video Understanding     | 7B     | 112        | RoboVQA    |
+| Mathematics             | 235B       | 188       | In house       |
+| Tool Use                | 235B       | 59        | In house       |
+| Image Understanding     | 235B       | 46        | In house       |
+
+**Table 4: Summary of PolyTrace.**
+
 ## Data structure
 
 We collect the length from training trajectory for data anonymization.

@@ -57,7 +57,7 @@ For multi-turn task workloads:
 
 We provide a use example in generate.py. Generate input data of Cosmos task in Verl. Controlling the output length by ignore_eos=True and max output length = output length.
 
-An example of generating workloads using fitted distributions is shown in the generate_distribution.py, for more stringent data desensitization.
+An example of generating workloads using fitted distributions is shown in the generate_distribution.py, for more stringent data desensitization. We use a Gaussian mixture distribution method to fit the distribution of model B workloads, extract the corresponding parameters to obtain the distribution, and then sample from it to generate workload data.
 
 ## Notes
 

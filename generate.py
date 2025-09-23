@@ -1,4 +1,4 @@
-# A example of generating DataProto from PolyTrace, Cosmos
+# A example of generating DataProto from PolyTrace
 from verl import DataProto
 import torch
 import numpy as np
@@ -19,6 +19,21 @@ class Generator:
         self.processor = hf_processor(model_path)
         self.tokenizer = hf_tokenizer(model_path, trust_remote_code=True)
         self.parameters = parameters
+        self.vocabulary = [
+                "the", "agent", "in", "video", "was", "given", "instruction", "pick", "up",
+                "glasses", "is", "it", "possible", "for", "to", "execute", "task",
+                "specified", "yes", "no", "a", "b", "c", "d", "question", "answer",
+                "robot", "table", "chair", "book", "pen", "apple", "banana", "orange",
+                "cup", "bottle", "laptop", "phone", "keys", "remote", "door", "window",
+                "box", "ball", "move", "place", "open", "close", "find", "bring", "put",
+                "take", "go", "stop", "on", "under", "beside", "next", "from", "into",
+                "out", "of", "with", "near", "far", "red", "blue", "green", "yellow",
+                "black", "white", "big", "small", "heavy", "light", "fast", "slow",
+                "what", "where", "when", "why", "how", "which", "who", "person",
+                "object", "item", "location", "command", "request", "action", "perform",
+                "complete", "succeed", "fail", "correctly", "incorrectly", "left", "right",
+                "forward", "backward"
+            ]
 
     def get_length_info(self, step):
         """get specific step's input/output length from a JSON file."""
@@ -98,7 +113,7 @@ class Generator:
         step_input_len = self.sample_from_range_distribution(org_step_input_len, bsz)
         step_output_len = self.sample_from_range_distribution(org_step_output_len, bsz)
 
-
+        # TODO: support different vision encoders and video data, this just a hardcore for cosmos dataset and qwen2.5-vl
         for input_len, output_len in zip(step_input_len, step_output_len):
             if input_len < 960:
                 video_len = 480
@@ -138,23 +153,7 @@ class Generator:
                 video_shape =  [1, 20, 3, 504, 644]
                 seq_len = input_len - video_len        
 
-            # Generate a list of random words for the raw prompt
-            vocabulary = [
-                "the", "agent", "in", "video", "was", "given", "instruction", "pick", "up",
-                "glasses", "is", "it", "possible", "for", "to", "execute", "task",
-                "specified", "yes", "no", "a", "b", "c", "d", "question", "answer",
-                "robot", "table", "chair", "book", "pen", "apple", "banana", "orange",
-                "cup", "bottle", "laptop", "phone", "keys", "remote", "door", "window",
-                "box", "ball", "move", "place", "open", "close", "find", "bring", "put",
-                "take", "go", "stop", "on", "under", "beside", "next", "from", "into",
-                "out", "of", "with", "near", "far", "red", "blue", "green", "yellow",
-                "black", "white", "big", "small", "heavy", "light", "fast", "slow",
-                "what", "where", "when", "why", "how", "which", "who", "person",
-                "object", "item", "location", "command", "request", "action", "perform",
-                "complete", "succeed", "fail", "correctly", "incorrectly", "left", "right",
-                "forward", "backward"
-            ]
-            context = random.choices(vocabulary, k=seq_len)
+            context = random.choices(self.vocabulary, k=seq_len)
 
             # Align with rl_dataset.py data format
             text_content = " ".join(context)
@@ -276,22 +275,7 @@ class Generator:
         step_output_len = self.sample_from_range_distribution(org_step_output_len, bsz)
         
         for input_len, output_len in zip(step_input_len, step_output_len):
-            vocabulary = [
-                "the", "agent", "in", "video", "was", "given", "instruction", "pick", "up",
-                "glasses", "is", "it", "possible", "for", "to", "execute", "task",
-                "specified", "yes", "no", "a", "b", "c", "d", "question", "answer",
-                "robot", "table", "chair", "book", "pen", "apple", "banana", "orange",
-                "cup", "bottle", "laptop", "phone", "keys", "remote", "door", "window",
-                "box", "ball", "move", "place", "open", "close", "find", "bring", "put",
-                "take", "go", "stop", "on", "under", "beside", "next", "from", "into",
-                "out", "of", "with", "near", "far", "red", "blue", "green", "yellow",
-                "black", "white", "big", "small", "heavy", "light", "fast", "slow",
-                "what", "where", "when", "why", "how", "which", "who", "person",
-                "object", "item", "location", "command", "request", "action", "perform",
-                "complete", "succeed", "fail", "correctly", "incorrectly", "left", "right",
-                "forward", "backward"
-            ]
-            context = random.choices(vocabulary, k=input_len)
+            context = random.choices(self.vocabulary, k=input_len)
 
             text_content = " ".join(context)
             messages = [

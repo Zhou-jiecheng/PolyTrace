@@ -1,0 +1,16 @@
+{"step": 4, "rank": 0, "tp_rank": 0, "dp_rank": 0, "local_index": 0, "input": 358, "output": [5824, 5678, 5252, 6877, 6299, 4660, 4568, 5043], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 0, "tp_rank": 0, "dp_rank": 0, "local_index": 1, "input": 568, "output": [12011, 14890, 9964, 11451, 12071, 10839, 11125, 8890], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 0, "tp_rank": 0, "dp_rank": 0, "local_index": 2, "input": 673, "output": [5816, 4103, 3695, 3903, 4723, 4581, 4746, 5561], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 0, "tp_rank": 0, "dp_rank": 0, "local_index": 3, "input": 633, "output": [5406, 7623, 16000, 6284, 5226, 16000, 5237, 4911], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 0, "tp_rank": 0, "dp_rank": 0, "local_index": 4, "input": 626, "output": [12490, 16000, 16000, 16000, 16000, 14617, 16000, 15560], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 0, "tp_rank": 0, "dp_rank": 0, "local_index": 5, "input": 1318, "output": [12805, 16000, 12796, 9404, 16000, 13205, 13612, 11912], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 0, "tp_rank": 0, "dp_rank": 0, "local_index": 6, "input": 497, "output": [13774, 11329, 9165, 10546, 16000, 16000, 13774, 9836], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 0, "tp_rank": 0, "dp_rank": 0, "local_index": 7, "input": 172, "output": [11037, 7528, 7988, 5021, 11237, 7551, 6729, 7307], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 4, "tp_rank": 0, "dp_rank": 1, "local_index": 0, "input": 252, "output": [8735, 4339, 7168, 2868, 3749, 3058, 6213, 2851], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 4, "tp_rank": 0, "dp_rank": 1, "local_index": 1, "input": 270, "output": [4793, 7295, 4927, 4047, 3839, 3849, 6810, 4437], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 4, "tp_rank": 0, "dp_rank": 1, "local_index": 2, "input": 290, "output": [11512, 6789, 7060, 13297, 14286, 12198, 7649, 8993], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 4, "tp_rank": 0, "dp_rank": 1, "local_index": 3, "input": 969, "output": [16000, 16000, 16000, 11207, 12868, 9650, 8280, 6419], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 4, "tp_rank": 0, "dp_rank": 1, "local_index": 4, "input": 518, "output": [16000, 14875, 16000, 15873, 9313, 16000, 9442, 16000], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 4, "tp_rank": 0, "dp_rank": 1, "local_index": 5, "input": 462, "output": [11697, 12298, 13721, 12271, 16000, 13385, 13304, 14666], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 4, "tp_rank": 0, "dp_rank": 1, "local_index": 6, "input": 184, "output": [16000, 16000, 13198, 16000, 13046, 16000, 15637, 16000], "n_sampling": 8, "validate": false}
+{"step": 4, "rank": 4, "tp_rank": 0, "dp_rank": 1, "local_index": 7, "input": 196, "output": [9229, 10543, 7784, 8474, 12377, 10138, 8166, 8195], "n_sampling": 8, "validate": false}

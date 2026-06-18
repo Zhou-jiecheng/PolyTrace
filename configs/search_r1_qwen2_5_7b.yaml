@@ -1,0 +1,22 @@
+{
+  "name": "search_r1_qwen2_5_7b",
+  "repo": "search_r1",
+  "repo_path": "${POLYTRACE_WORKSPACE}/search_r1",
+  "benchmark_script": "${POLYTRACE_WORKSPACE}/search_r1/scripts/ali_script/benchmark.sh",
+  "workload_path": "${POLYTRACE_WORKSPACE}/search_r1/profile/multiturn_workload_log/0617_0223",
+  "benchmark_log_path": "${POLYTRACE_WORKSPACE}/search_r1/logs/benchmark_search_r1_7b.log",
+  "formal_log_path": "${POLYTRACE_WORKSPACE}/search_r1/logs/train_ali_formal_7b.log",
+  "step_groups": "0;1;2;3",
+  "repeat": 1,
+  "env": {
+    "WORKLOAD_BENCHMARK": "1",
+    "WORKLOAD_COLLECT_MULTITURN": "0",
+    "WORKLOAD_COLLECT_VALIDATE_MULTITURN": "0",
+    "WORKLOAD_BENCHMARK_SLEEP_TOOL": "1",
+    "WORKLOAD_BENCHMARK_LIVE_TOOL": "1"
+  },
+  "workload": {
+    "type": "multiturn",
+    "expected_records_per_step": 2048
+  }
+}

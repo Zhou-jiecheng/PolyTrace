@@ -1,0 +1,21 @@
+{
+  "name": "verl_dapo_qwen2_5_32b",
+  "repo": "verl",
+  "repo_path": "${POLYTRACE_WORKSPACE}/verl",
+  "benchmark_script": "${POLYTRACE_WORKSPACE}/verl/scripts/ali_script/benchmark.sh",
+  "workload_path": "${POLYTRACE_WORKSPACE}/verl/profile/packed_length_log/20260614_023133",
+  "benchmark_log_path": "${POLYTRACE_WORKSPACE}/verl/logs/benchmark_dapo_32b.log",
+  "formal_log_path": "${POLYTRACE_WORKSPACE}/verl/logs/run_dapo_qwen2.5_32b_formal.log",
+  "step_groups": "0,1;2,3",
+  "repeat": 1,
+  "env": {
+    "WORKLOAD_BENCHMARK": "1",
+    "WORKLOAD_COLLECT_LENGTHS": "0",
+    "WORKLOAD_COLLECT_VALIDATE_LENGTHS": "0",
+    "WORKLOAD_MAX_TOKEN_POLICY": "separate"
+  },
+  "workload": {
+    "type": "packed_lengths",
+    "filter_indices_file": "dapo_filter_indices.jsonl"
+  }
+}

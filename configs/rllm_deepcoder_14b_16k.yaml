@@ -1,0 +1,23 @@
+{
+  "name": "rllm_deepcoder_14b_16k",
+  "repo": "rllm",
+  "repo_path": "${POLYTRACE_WORKSPACE}/rllm",
+  "benchmark_script": "${POLYTRACE_WORKSPACE}/rllm/scripts/deepcoder/train/benchmark_deepcoder_14b_coding_16k.sh",
+  "workload_path": "${POLYTRACE_WORKSPACE}/rllm/profile/packed_length_log/20260616_024512",
+  "benchmark_log_path": "${POLYTRACE_WORKSPACE}/rllm/logs/deepcoder_14b_coding_16k/benchmark_deepcoder_14b.log",
+  "formal_log_path": "${POLYTRACE_WORKSPACE}/rllm/logs/deepcoder_14b_coding_16k/h200_1_node.log",
+  "step_groups": "0;1",
+  "repeat": 1,
+  "env": {
+    "WORKLOAD_BENCHMARK": "1",
+    "WORKLOAD_COLLECT_LENGTHS": "0",
+    "WORKLOAD_COLLECT_VALIDATE_LENGTHS": "0",
+    "WORKLOAD_MAX_TOKEN_POLICY": "separate",
+    "WORKLOAD_BENCHMARK_SKIP_REWARD": "1",
+    "WORKLOAD_BENCHMARK_SLEEP_REWARD": "1"
+  },
+  "workload": {
+    "type": "packed_lengths",
+    "reward_timing_glob": "reward_timings_step_*.jsonl"
+  }
+}

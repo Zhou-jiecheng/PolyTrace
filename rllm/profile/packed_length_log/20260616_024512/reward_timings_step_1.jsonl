@@ -1,0 +1,2 @@
+{"step": 1, "rank": 0, "tp_rank": 0, "dp_rank": 0, "batch_size": 64, "reward_time_s": 78.47991797141731, "response_sum": 639625, "response_mean": 9994.140625, "response_max": 16000, "validate": false}
+{"step": 1, "rank": 4, "tp_rank": 0, "dp_rank": 1, "batch_size": 64, "reward_time_s": 46.14387304149568, "response_sum": 822876, "response_mean": 12857.4375, "response_max": 16000, "validate": false}

@@ -1,0 +1,20 @@
+{
+  "name": "verl_video_qwen2_5_vl_7b",
+  "repo": "verl-video",
+  "repo_path": "${POLYTRACE_WORKSPACE}/verl-video",
+  "benchmark_script": "${POLYTRACE_WORKSPACE}/verl-video/examples/grpo_trainer/run_qwen2_5_vl-7b.sh",
+  "workload_path": "${POLYTRACE_WORKSPACE}/verl-video/profile/packed_length_log/20260609_033329",
+  "benchmark_log_path": "${POLYTRACE_WORKSPACE}/verl-video/logs/video_r1_benchmark_step_0.log",
+  "formal_log_path": "${POLYTRACE_WORKSPACE}/verl-video/logs/video_r1_formal_0610_084530.log",
+  "step_groups": "1",
+  "repeat": 1,
+  "env": {
+    "WORKLOAD_BENCHMARK": "1",
+    "WORKLOAD_COLLECT_LENGTHS": "0",
+    "WORKLOAD_COLLECT_VALIDATE_LENGTHS": "0",
+    "WORKLOAD_MAX_TOKEN_POLICY": "adaptive_blend"
+  },
+  "workload": {
+    "type": "packed_lengths"
+  }
+}

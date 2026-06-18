@@ -1,0 +1,71 @@
+# Generated benchmark outputs
+/reports/
+/logs/
+*.log
+
+# Nested git metadata from copied/patched upstream repos
+**/.git/
+
+# Repo-local cluster launch scripts are machine specific. Keep benchmark launch
+# instructions in README/configs instead of committing private scripts.
+**/scripts/
+
+# Training datasets and generated experiment artifacts
+**/data/
+!dataset/
+!dataset/**
+**/logs/
+**/wandb/
+**/outputs/
+**/ray_results/
+**/.config/
+
+# Keep only compact benchmark inputs from profile directories.
+/verl/profile/*
+/verl/scripts/ali_script/*
+!/verl/profile/packed_length_log/
+!/verl/profile/packed_length_log/**
+
+/verl-video/profile/*
+/verl-video/scripts/ali_script/*
+!/verl-video/profile/packed_length_log/
+!/verl-video/profile/packed_length_log/**
+
+/rllm/profile/*
+/rllm/scripts/ali_script/*
+!/rllm/profile/packed_length_log/
+!/rllm/profile/packed_length_log/**
+
+/search_r1/profile/*
+/search_r1/scripts/ali_script/*
+!/search_r1/profile/multiturn_workload_log/
+!/search_r1/profile/multiturn_workload_log/**
+/search_r1/local_dense_retriever
+
+# Drop per-rank multiturn shards when merged rank-agnostic workload exists.
+**/multiturn_workload_step_*_rank_*.jsonl
+
+# Python/build caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Private datasets, checkpoints, traces, and large binary artifacts
+*.parquet
+*.pickle
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.index
+*.wandb
+*.trace.json.gz
+
+# Machine-local credentials
+.netrc
+.env

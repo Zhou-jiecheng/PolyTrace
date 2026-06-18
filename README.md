@@ -37,29 +37,6 @@ benchmark_suite/
 The config files have `.yaml` names but use JSON syntax so the suite has no
 external dependency.
 
-## What To Commit
-
-Keep these files:
-
-- `benchmark_suite/suite.py`, `run_suite.sh`, `configs/`, `tools/`, `README.md`.
-- Patched benchmark source code under the four repo directories.
-- Compact benchmark inputs:
-  - `dataset/workloads/*`
-  - `dataset/tool_call_latency/*`
-  - `*/profile/packed_length_log/**/*.jsonl`
-  - `*/profile/multiturn_workload_log/multiturn_workload_step_*.jsonl`
-
-Do not commit these files:
-
-- Any `scripts/` directory. These are cluster-specific launch scripts.
-- Training/evaluation data under `data/`.
-- Training logs, benchmark logs, wandb runs, and generated reports.
-- Checkpoints, model weights, parquet files, retriever indexes, pickle files,
-  profiler traces, `.netrc`, `.env`, or any token/key material.
-- Per-rank multi-turn shards such as `multiturn_workload_step_0_rank_0.jsonl`
-  when the merged rank-agnostic workload exists.
-
-The `.gitignore` implements this policy.
 
 ## Quick Start
 
@@ -167,16 +144,6 @@ and tool latency information. Prefix-cache behavior can dominate this workload,
 so benchmark replay should preserve prompt grouping and turn order as much as
 possible. Live retriever/tool replay can be enabled for end-to-end validation.
 
-## Release Checklist
+## Dataset
 
-Before pushing publicly:
-
-1. Run `python3 benchmark_suite/tools/validate_release.py --root benchmark_suite`.
-2. Confirm `scripts/`, `data/`, `logs/`, `wandb/`, checkpoints, indexes, and raw
-   profiler traces are not tracked.
-3. Confirm configs use `${POLYTRACE_WORKSPACE}` or documented placeholders, not
-   machine-local absolute paths.
-4. Confirm no credential-like strings are present, especially `WANDB_API_KEY`,
-   API tokens, `.netrc`, or `.env` files.
-5. Confirm committed workload inputs are compact and do not reveal private
-   dataset content beyond length/timing distributions.
+There are some industrial workload in model deployment, you can replay these workload or synthetic workload to benchmark various framework or cluster.

@@ -271,7 +271,7 @@ def main_task(config):
         from verl.trainer.Generator import Generator
 
         default_workload_path = os.path.join(
-            os.getenv("RAY_DATA_HOME", "/mnt/shared-storage-user/ailab-sys/zhoujiecheng/aliyun_data/rllm"),
+            os.getenv("RAY_DATA_HOME", "/rllm"),
             "profile/packed_length_log",
         )
         workload_path = os.getenv("WORKLOAD_PATH") or os.getenv("WORKLOAD_LENGTH_DIR") or default_workload_path

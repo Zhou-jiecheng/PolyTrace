@@ -221,7 +221,7 @@ class TaskRunner:
         if os.getenv("WORKLOAD_BENCHMARK", "0").strip().lower() in {"1", "true", "yes", "y", "on"}:
             from .Generator import Generator
 
-            default_workload_path = "/mnt/shared-storage-user/ailab-sys/zhoujiecheng/aliyun_data/verl-video/logs/packed_length_log/20260610_053922"
+            default_workload_path = "/verl-video/logs/packed_length_log/20260610_053922"
             workload_step = os.getenv("WORKLOAD_STEP", "1")
             workload_path = os.getenv("WORKLOAD_PATH") or os.getenv("OUTPUT_LEN_FILE")
             workload_length_dir = os.getenv("WORKLOAD_LENGTH_DIR")

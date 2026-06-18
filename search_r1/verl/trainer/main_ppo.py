@@ -244,7 +244,7 @@ class TaskRunner:
             from verl.trainer.Generator import Generator
 
             default_workload_path = os.path.join(
-                os.getenv("RAY_DATA_HOME", "/mnt/shared-storage-user/ailab-sys/zhoujiecheng/aliyun_data/search_r1"),
+                os.getenv("RAY_DATA_HOME", "/search_r1"),
                 "profile/multiturn_workload_log",
             )
             workload_path = os.getenv("WORKLOAD_PATH") or os.getenv("WORKLOAD_LENGTH_DIR") or default_workload_path

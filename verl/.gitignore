@@ -39,6 +39,9 @@ tmp/
 *.egg
 *.whl
 /profile
+!/profile/
+!/profile/packed_length_log/
+!/profile/packed_length_log/**
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.

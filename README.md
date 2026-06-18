@@ -41,8 +41,11 @@ external dependency.
 ## Quick Start
 
 Environments:
+
 For verl and verl-video, use verl docker images: verl-app-verl0.4-sglang0.4.6.post5-vllm0.8.5-mcore0.12.2-te2.2
+
 For rllm, use verl docker images: verl-ngc-th2.4.0-cu124-vllm0.6.3-te1.7-v0.0.4, and install some packages like sentence transformers. Moreover, firejail is needed to conduct sandbox validation
+
 For search-r1, use verl docker images: verl-app-verl0.4-sglang0.4.6.post5-vllm0.8.5-mcore0.12.2-te2.2, and pip install sglang0.4.6.post4 --no-deps.
 
 If the four patched repos live inside `benchmark_suite/`, set:

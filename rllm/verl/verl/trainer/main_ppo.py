@@ -272,7 +272,7 @@ def main_task(config):
 
         default_workload_path = os.path.join(
             os.getenv("RAY_DATA_HOME", "/rllm"),
-            "profile/packed_length_log",
+            "profile/packed_length_log/20260616_024512",
         )
         workload_path = os.getenv("WORKLOAD_PATH") or os.getenv("WORKLOAD_LENGTH_DIR") or default_workload_path
         workload_step_groups_env = os.getenv("WORKLOAD_STEP_GROUPS", "0")
